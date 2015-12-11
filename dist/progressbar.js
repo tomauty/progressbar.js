@@ -1,3 +1,7 @@
+// ProgressBar.js 0.10.0
+// https://kimmobrunfeldt.github.io/progressbar.js
+// License: MIT
+
 // ProgressBar.js 0.9.0
 // https://kimmobrunfeldt.github.io/progressbar.js
 // License: MIT
