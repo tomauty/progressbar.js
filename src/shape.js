@@ -131,6 +131,19 @@ Shape.prototype.destroy = function destroy() {
     }
 };
 
+Shape.prototype.setHtml = function setHtml(html) {
+    if (this._progressPath === null) throw new Error(DESTROYED_ERROR);
+
+    if (this.text === null) {
+        // Create new text node
+        this.text = this._createTextElement(this._opts, this._container);
+        this._container.appendChild(this.text);
+    }
+
+    // Set new HTML content
+    this.text.innerHTML = html;
+};
+
 Shape.prototype.set = function set(progress) {
     if (this._progressPath === null) {
         throw new Error(DESTROYED_ERROR);
